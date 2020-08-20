@@ -2,7 +2,7 @@
 #define AppNameLong AppName + " " + AppVersion
 #define AppMainExeName "bin\julia.exe"
 #define CurrentYear GetDateTimeString('yyyy', '', '')
-#define DirName AppName + " " + AppVersion
+#define DirName AppName + "-" + AppVersion
 
 
 [LangOptions]
@@ -25,7 +25,7 @@ WizardPreparing=Installing
 PreparingDesc=
 InstallingLabel=
 ClickFinish=
-FinishedHeadingLabel=Installation Successfull
+FinishedHeadingLabel=Installation Successful
 FinishedLabelNoIcons=[name] has been successfully installed.
 FinishedLabel=[name] has been successfully installed.
 StatusExtractFiles=Extracting...
@@ -110,7 +110,6 @@ Root: HKA; Subkey: "{code:GetEnvironmentKey}"; ValueType: expandsz; ValueName: "
 [Code]
 
 procedure InitializeWizard;
-
 begin
   WizardForm.Bevel.Visible := False;
   WizardForm.Bevel1.Visible := False;
