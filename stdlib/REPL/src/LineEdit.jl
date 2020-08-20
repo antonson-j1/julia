@@ -522,7 +522,7 @@ end
 
 
 # Edit functionality
-is_non_word_char(c) = c in """ \t\n\"\\'`@\$><=:;|&{}()[].,+-*/?%^~"""
+is_non_word_char(c::Char) = c in """ \t\n\"\\'`@\$><=:;|&{}()[].,+-*/?%^~"""
 
 function reset_key_repeats(f::Function, s::MIState)
     key_repeats_sav = s.key_repeats
